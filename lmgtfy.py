@@ -33,7 +33,7 @@ class LetMeGoogleThatForYou(loader.Module):
     """Let me Google that for you, coz you too lazy to do that yourself."""
     strings = {"name": "LetMeGoogleThatForYou",
                "no_query": "<b>I need something to Google for the bitch(es) here.</b>",
-               "result": "<b>Let me get that for you,Bitch.</b>\n<a href='{}'>{}</a>"}
+               "result": "<b>Let me Google that for you, Bitch!.</b>\n<a href='{}'>{}</a>"}
 
     def __init__(self):
         self.name = self.strings["name"]
