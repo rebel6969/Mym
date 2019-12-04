@@ -33,9 +33,9 @@ KANGING_STR = [
 ]
 
 
-@register(outgoing=True, pattern="^.kang")
+@register(outgoing=True, pattern="^.kangs")
 async def kang(args):
-    """ For .kang command, kangs stickers or creates new ones. """
+    """ For .kangs command, kangs stickers or creates new ones. """
     user = await args.client.get_me()
     if not user.username:
         user.username = user.first_name
