@@ -1,0 +1,39 @@
+ERROR:root:Command failed
+Traceback (most recent call last):
+  File "/app/friendly-telegram/dispatcher.py", line 134, in handle_command
+    await func(message)
+  File "https://raw.githubusercontent.com/rebel6969/modules-repo/master/gitupload-nofullpath.py", line 60, in download
+    await git_commit(downloaded_file_name,mone)
+  File "https://raw.githubusercontent.com/rebel6969/modules-repo/master/gitupload-nofullpath.py", line 67, in git_commit
+    commit_data = file.read()
+  File "/app/.heroku/python/lib/python3.7/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+ERROR:telethon.client.updates:Unhandled exception on handle_command
+Traceback (most recent call last):
+  File "/app/friendly-telegram/dispatcher.py", line 145, in handle_command
+    await (message.edit if message.out else message.reply)(txt)
+  File "/app/.heroku/python/lib/python3.7/site-packages/telethon/tl/custom/message.py", line 728, in edit
+    *args, **kwargs
+  File "/app/.heroku/python/lib/python3.7/site-packages/telethon/client/messages.py", line 1059, in edit_message
+    msg = self._get_response_message(request, await self(request), entity)
+  File "/app/.heroku/python/lib/python3.7/site-packages/telethon/client/users.py", line 74, in __call__
+    result = await future
+telethon.errors.rpcerrorlist.MessageIdInvalidError: The specified message ID is invalid or you can't do that operation on such message (caused by EditMessageRequest)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/.heroku/python/lib/python3.7/site-packages/telethon/client/updates.py", line 431, in _dispatch_update
+    await callback(event)
+  File "/app/friendly-telegram/dispatcher.py", line 147, in handle_command
+    raise e
+  File "/app/friendly-telegram/dispatcher.py", line 134, in handle_command
+    await func(message)
+  File "https://raw.githubusercontent.com/rebel6969/modules-repo/master/gitupload-nofullpath.py", line 60, in download
+    await git_commit(downloaded_file_name,mone)
+  File "https://raw.githubusercontent.com/rebel6969/modules-repo/master/gitupload-nofullpath.py", line 67, in git_commit
+    commit_data = file.read()
+  File "/app/.heroku/python/lib/python3.7/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
